@@ -1,0 +1,87 @@
+﻿@model Pharmacy_System.Models.Admin
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
+}
+
+
+<div class="right_col" role="main">
+
+    <h2>Details</h2>
+    <div>
+        <h4>Admin</h4>
+        <hr/>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.fname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.lname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.lname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.user_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.user_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.phone_number)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.phone_number)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.date_birth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.date_birth)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.email_address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.email_address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.card_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.card_id)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new {id = Model.id}) |
+        @Html.ActionLink("Back to Dashboard", "Admin_Dashboard")
+    </p>
+
+</div>

@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Admin_Dashboard";
+    Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
+}
+
+<!-- page content -->
+<div class="right_col" role="main">
+    @model IEnumerable<Pharmacy_System.Models.Admin>
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
+    }
+
+    <h2>All Admins</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_birth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email_address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.card_id)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone_number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_birth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email_address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.card_id)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<!-- /page content -->
+
